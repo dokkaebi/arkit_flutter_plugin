@@ -1,6 +1,9 @@
 import Foundation
 
 func getImageByName(_ name: String) -> UIImage? {
+    if let img = UIImage(contentsOfFile: name) {
+        return img
+    }
     if let img = UIImage(named: name) {
         return img
     }
